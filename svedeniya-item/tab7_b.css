@@ -1,0 +1,283 @@
+.text{
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 300;
+    /* letter-spacing: 2px; */
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.images{
+    display: flex;
+    justify-content:flex-start;
+    height: 350px;
+    gap: 30px;
+    width: 50%;
+}
+
+.images img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+h1{
+    font-family: 'OswaldBold', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: rgb(22, 22, 22);
+    padding: 60px 200px 40px 200px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.footer-link{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.footer-link .nav-menu__link-item{
+    font-size: 20px;
+    font-family: 'OswaldRegular', sans-serif; 
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.footer-contact div{
+    font-family: 'OswaldRegular', sans-serif; 
+    font-weight: 300;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.footer-contact .title-contact{
+    font-size: 26px;
+}
+
+.footer-contact a img{
+    width: 50px;
+    margin-top: 15px;
+}
+
+.footer__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.footer__logo img{
+    width: 500px;
+}
+
+@media screen and (max-width: 1698px){
+    .nav-menu__link{
+        gap: 60px;
+    }
+
+    .nav-menu{
+        padding: 10px 50px;
+    }
+
+}
+
+@media screen and (max-width: 1509px){
+    .nav-menu__link-item{
+        font-size: 18px;
+    }
+
+    .nav-menu__link{
+        gap: 60px;
+    }
+
+    .nav-menu{
+        padding: 10px 30px;
+    }
+
+    li img{
+        width: 200px;
+    }
+
+}
+
+@media screen and (max-width: 1458px){
+    .footer-map{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 1370px){
+    @keyframes sizeChange { 
+        from {
+            font-size: 16px;
+        }
+        to {
+            font-size: 14px;
+        }
+    }
+
+    .nav-menu__link{
+        gap: 30px;
+    }
+
+    .nav-menu__logo{
+        margin-right: 100px;
+    }
+
+}
+
+@media screen and (max-width: 1285px){
+
+    .nav-menu{
+        padding: 10px 60px;
+    }
+
+    .header-contact{
+        gap: 50px;
+    }
+
+    .nav-menu{
+        position: absolute;
+    }
+
+}
+
+@media screen and (max-width: 1178px){
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        width: 100%;
+        grid-template-areas:
+        "links contacts"
+        "map map";
+    }
+
+    .footer-link {
+        grid-area: links; 
+    }
+
+    .footer-contact {
+        grid-area: contacts; 
+    }
+    
+     .footer-map{
+        grid-area: map;
+        width: 100%;
+    }
+
+    footer{
+        padding: 60px 50px 40px 50px;
+    }
+
+    .footer-map iframe {
+        width: 100%;
+        height: 400px;
+    }
+
+    .header-contact{
+        padding: 0px 10px;
+    }
+}
+
+@media screen and (max-width: 1043px){
+    .images{
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: auto;
+    }
+}
+
+@media screen and (max-width: 825px){
+   
+   .svedeniya-container{
+        padding: 40px;
+        margin: 170px 30px 70px 30px;
+    }
+}
+
+@media screen and (max-width: 461px){
+   
+   .svedeniya-container{
+        padding: 20px;
+        margin: 170px 10px 70px 10px;
+    }
+}
+
+@media screen and (max-width: 397px){
+   
+   .svedeniya-container{
+        padding: 5px;
+        margin: 170px 5px 70px 5px;
+    }
+}
+
+@media screen and (max-width: 761px){
+
+    .nav-menu__logo img{
+        width: 150px;
+    }
+
+    .header-contact{
+        flex-direction: column;
+        height: 150px;
+        gap: 10px;
+    }
+
+    .nav-menu{
+        margin-top: 150px;
+    }
+
+}
+
+@media screen and (max-width: 608px){
+   
+     .footer-map iframe {
+        width: 100%;
+        height: 400px;
+        box-sizing: border-box;
+    }
+
+     .footer-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 519px){
+    
+   .footer__logo img{
+        width: 300px;
+    } 
+}
+
+
+@media screen and (max-width: 496px){
+    
+    .nav-menu__logo img{
+        width: 100px;
+    }
+   
+}
+
+@media screen and (max-width: 496px){
+    
+    .nav-menu__logo img{
+        width: 100px;
+    } 
+}
