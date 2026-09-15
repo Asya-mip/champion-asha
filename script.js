@@ -55,10 +55,10 @@ function handleClick(clickedItem) {
     // Определим, какой пункт был нажат
     if (clickedItem.contains(headerJudo)) {
         headerJudo.classList.add('active');
-        descJudo.style.display = 'flex'; // Показываем описание Дзюдо
+        descJudo.style.display = 'flex'; // описание Дзюдо
     } else if (clickedItem.contains(headerSambo)) {
         headerSambo.classList.add('active');
-        descSambo.style.display = 'flex'; // Показываем описание Самбо
+        descSambo.style.display = 'flex'; // описание Самбо
     }
 }
 
@@ -70,12 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalImages = galleryTrack.childNodes.length;
     const imagesPerSlide = 3;
 
-    // Функция обновления состояния галереи остается той же
     function updateGallery() {
         galleryTrack.style.transform = `translateX(${Math.floor(currentIndex / imagesPerSlide) * -28}%)`;
     }
 
-    // Обработчики кнопок навигации тоже остаются такими же
     prevButton.addEventListener('click', () => {
         currentIndex -= imagesPerSlide;
         if (currentIndex < 0) {
@@ -118,13 +116,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Окончание перетаскивания
     galleryTrack.addEventListener('mouseup', () => {
         startMouseX = null;
         isDragging = false;
     });
 
-    // Поддержка сенсорных устройств сохраняется из предыдущего примера
     let startTouchX = null;
     let isSwiping = false;
 
@@ -153,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
         isSwiping = false;
     });
 
-    // Первоначальная инициализация
     updateGallery();
 });
 
