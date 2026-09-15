@@ -292,12 +292,12 @@ body{
     object-fit: cover;
     z-index: 1; /* Начальное значение слоя */
     opacity: 0; /* Скрываем изначально все картинки */
-    transition: all 1s ease-in-out; /* Плавный переход */
+    transition: all 1s ease-in-out; 
 }
 
 .about-club__carousel img.active {
-    opacity: 1; /* Активная картинка станет видимой */
-    z-index: 2; /* Картинки будут перекрывать предыдущую */
+    opacity: 1; 
+    z-index: 2; 
 }
 
 .triangle-top-left {
