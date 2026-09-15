@@ -1,0 +1,1081 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'OswaldBold'; 
+    src: url('./fonts/Oswald-Bold.ttf') format('truetype'); 
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'OswaldRegular'; 
+    src: url('./fonts/Oswald-Regular.ttf') format('truetype'); 
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'OswaldLight'; 
+    src: url('./fonts/Oswald-Light.ttf') format('truetype'); 
+    font-weight: 200;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-menu.active-header {
+    background-color: rgb(22, 22, 22) !important; 
+    transition: background-color 0.3s ease-in-out; 
+    margin-top: 0px;
+}
+
+.header-contact div {
+    animation: sizeChange 3s infinite alternate; 
+}
+
+@keyframes sizeChange { 
+    from {
+        font-size: 20px;
+    }
+    to {
+        font-size: 18px;
+    }
+}
+
+.header-contact{
+    background-color: rgb(22, 22, 22);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 140px;
+    align-items: center;
+    color: aliceblue;
+    font-size: 18px;
+    padding: 0px 200px 0px 200px;
+    font-family: 'OswaldRegular', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 100px 10px 100px;
+    position: absolute;
+    z-index: 10;
+    position: fixed;
+    background-color: rgba(31, 30, 30, 0.534);
+    margin-top: 50px;
+}
+
+.nav-menu__mobile, .nav-menu__close{
+    display: none;
+}
+
+.nav-menu__close{
+    cursor: pointer;
+}
+
+.nav-menu__burger.active{
+    display: none;
+}
+
+.nav-menu__close img{
+    width: 70px; 
+}
+
+.nav-menu__mobile button{
+    background-color: transparent; /* Прозрачный цвет фона */
+    border: none;  
+}
+
+.nav-menu__link-mobile {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    background-color: rgb(22, 22, 22);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: 220px;
+    min-width: 200px;
+    width: 100%;
+    z-index: 11;
+}
+
+/* Показываем скрытое меню при активации */
+.nav-menu__link-mobile.active, .nav-menu__close.active{
+    display: block;
+}
+
+.nav-menu.active{
+    background-color: rgb(22, 22, 22);  
+    position:absolute;
+    padding: 10px 100px 50px 100px;
+}
+
+.nav-menu__link-item_mobile{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    color: rgb(247, 247, 247);
+    text-decoration: none;
+    font-family: 'OswaldBold', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 22px;
+}
+
+li{
+    list-style: none;
+}
+
+.nav-menu__logo img{
+    width: 250px;
+    height: auto;
+}
+
+.nav-menu__link-item{
+    font-family: 'OswaldBold', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 22px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-menu__logo{
+    width: 10%;
+    cursor: pointer;
+}
+
+.nav-menu__link-item:hover{
+    color: rgb(194, 194, 194);
+}
+
+.nav-menu__link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+}
+
+body{
+    background-image: linear-gradient(to right, rgb(1, 24, 56), rgb(10, 50, 100));
+    overflow-x: hidden;
+}
+
+.banner{
+    width: 100%;
+    height: auto;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+    /* z-index: -2; */
+}
+
+.banner-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute; 
+    top: 50%; 
+    left: 25%; 
+    transform: translate(-50%, -50%); 
+    /* z-index: 0; */
+}
+
+.banner-text__club{
+    font-family: 'BlackOpsOne-Regular', sans-serif;
+    font-weight: 300;
+    color: rgb(167, 188, 233);
+    font-size: 90px;
+    letter-spacing: 20px;
+}
+
+.banner-text__champion{
+    font-family: 'BlackOpsOne-Regular', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 180px;
+}
+
+.banner-text__discipline{
+    font-family: 'BlackOpsOne-Regular', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 60px;
+}
+
+.separation{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(22, 22, 22);
+    margin-top: -5px;
+}
+
+.about-club{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.about-club__text{
+    width: 50%;
+    height: 700px;
+    background-color: rgb(22, 22, 22);
+    color: aliceblue;
+    padding-left: 150px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+}
+
+.about-club__text h1{
+    font-family: 'OswaldBold', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.about-club__text div{
+    font-family: 'OswaldRegular', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+.about-club__carousel{
+    width: 50%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.about-club__carousel img{
+   position: absolute;
+   top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; 
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.about-club__carousel img.active {
+    opacity: 1; 
+    z-index: 2; 
+}
+
+.triangle-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 700px solid rgb(22, 22, 22); /* белая нижняя граница формирует основание треугольника */
+    border-right: 140px solid transparent; /* правая сторона прозрачная */
+    z-index: 3;
+}
+
+.disciplines{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.disciplines-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: 70px;
+}
+
+.disciplines-header__item{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    font-family: 'OswaldBold', sans-serif;
+    font-weight: bold;
+    color: rgb(226, 230, 240);
+    font-size: 30px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.disciplines-header__item-judo.active, .disciplines-header__item-sambo.active{
+    background-color: rgb(1, 27, 66);
+}
+
+.disciplines-header__item-judo, .disciplines-header__item-sambo{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 39, 90);
+    transition: all 0.3s ease-in-out;
+    padding-top: 6px;
+}
+
+.disciplines-header__item-judo:hover, .disciplines-header__item-sambo:hover{
+    background-color: rgb(1, 27, 66);
+}
+
+.disciplines-description{
+    width: 100%;
+    min-height: 800px;
+    background-image: linear-gradient(to right, rgb(1, 24, 56), rgb(10, 50, 100));
+    padding: 30px 150px 30px 150px;
+    position: relative;
+}
+
+.disciplines-description__item img{
+    width: 40%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.disciplines-description__item{
+    font-family: 'OswaldRegular', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    color: rgb(226, 230, 240);
+    letter-spacing: 1px;
+    flex-grow: 1;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+     margin-top: 30px;
+}
+
+.disciplines-description__item-judo, .disciplines-description__item-sambo{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.disciplines-description__item-judo.active, .disciplines-description__item-sambo.active{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.triangle-bottom-left{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-bottom: 500px solid rgb(22, 22, 22); /* белая нижняя граница формирует основание треугольника */
+    border-left: 160px solid transparent; /* правая сторона прозрачная */
+    z-index: 1;
+}
+
+.gallery {
+    position: relative;
+    overflow-x: hidden;
+    max-width: 100%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.gallery-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.gallery img {
+    object-fit: cover;
+    width: calc((100% / 3) - 10px * 2);
+    height: 500px;
+    cursor: pointer;
+}
+
+#prev,
+#next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    z-index: 1;
+    user-select: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+
+.contacts{
+    background-image: url('./image/contacts.png');
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    min-height: 600px;
+    padding: 20px 200px 20px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-btn{
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(51, 127, 228);
+    color: white;
+    padding: 10px;
+    font-family: 'OswaldRegular', sans-serif;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contacts-btn:hover{
+    background-color: rgb(1, 27, 66);
+    font-size: 26px;
+}
+
+.contacts h1{
+    color: white;
+    font-size: 50px;
+    font-family: 'OswaldBold', sans-serif;
+    font-weight: bold;
+}
+
+.contacts-text{
+    color: white;
+    font-size: 25px;
+    font-family: 'OswaldRegular', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: rgb(22, 22, 22);
+    padding: 60px 200px 40px 200px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.footer-link{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.footer-link .nav-menu__link-item{
+    font-size: 20px;
+    font-family: 'OswaldRegular', sans-serif; 
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.footer-contact div{
+    font-family: 'OswaldRegular', sans-serif; 
+    font-weight: 300;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.footer-contact .title-contact{
+    font-size: 26px;
+}
+
+.footer-contact a img{
+    width: 50px;
+    margin-top: 15px;
+}
+
+.footer__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.footer__logo img{
+    width: 500px;
+}
+
+@media screen and (max-width: 1850px){
+    .banner-text{
+        top: 50%; 
+    }
+
+    .banner-text__club{
+        font-size: 70px;
+    }
+
+    .banner-text__champion{
+        font-size: 140px;
+    }
+
+    .banner-text__discipline{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 1825px){
+    .disciplines-description__item-judo, .disciplines-description__item-sambo{
+        flex-direction: column;
+    }
+
+    .disciplines-description__item img{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 1698px){
+    .nav-menu__link{
+        gap: 60px;
+    }
+
+    .nav-menu{
+        padding: 10px 50px;
+    }
+
+}
+
+@media screen and (max-width: 1649px){
+    .banner-text{
+        top: 50%; 
+    }
+
+    .banner-text__club{
+        font-size: 70px;
+    }
+
+    .banner-text__champion{
+        font-size: 140px;
+    }
+
+    .banner-text__discipline{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1509px){
+    .nav-menu__link-item{
+        font-size: 18px;
+    }
+
+    .nav-menu__link{
+        gap: 60px;
+    }
+
+    .nav-menu{
+        padding: 10px 30px;
+    }
+
+    li img{
+        width: 200px;
+    }
+
+    .about-club__text{
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1458px){
+    .footer-map{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 1425px){
+    .banner-text{
+        top: 45%; 
+    }
+
+    .banner-text__club{
+        font-size: 60px;
+    }
+
+    .banner-text__champion{
+        font-size: 120px;
+    }
+
+    .banner-text__discipline{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1370px){
+    @keyframes sizeChange { 
+        from {
+            font-size: 16px;
+        }
+        to {
+            font-size: 14px;
+        }
+    }
+
+    .nav-menu__link{
+        gap: 30px;
+    }
+
+     li img{
+        width: 150px;
+    }
+
+    .nav-menu__logo{
+        margin-right: 100px;
+    }
+
+}
+
+@media screen and (max-width: 1285px){
+    .nav-menu__link{
+        display: none;
+    }
+
+    .nav-menu__mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        width: 100%;
+    }
+
+    .nav-menu{
+        padding: 10px 60px;
+    }
+
+    .nav-menu__burger{
+        cursor: pointer;
+    }
+
+      @keyframes sizeChange { 
+        from {
+            font-size: 14px;
+        }
+        to {
+            font-size: 12px;
+        }
+    }
+
+    .header-contact{
+        gap: 50px;
+    }
+
+    .nav-menu{
+        position: absolute;
+    }
+
+    .about-club{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 900px;
+        position: relative;
+    }
+
+    .about-club__text, .about-club__carousel{
+        width: 100%;
+    }
+
+    .about-club__text{
+        padding-bottom: 60px;
+    }
+
+    .triangle-top-left{
+        display: none;
+    }
+
+    #prev,
+    #next {
+        display: none;
+    }
+
+    .banner-text{
+        top: 50%; 
+    }
+
+    .banner-text__club{
+        font-size: 40px;
+    }
+
+    .banner-text__champion{
+        font-size: 80px;
+    }
+
+    .banner-text__discipline{
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 1178px){
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        width: 100%;
+        grid-template-areas:
+        "links contacts"
+        "map map";
+    }
+
+    .footer-link {
+        grid-area: links; 
+    }
+
+    .footer-contact {
+        grid-area: contacts; 
+    }
+    
+     .footer-map{
+        grid-area: map;
+        width: 100%;
+    }
+
+    footer{
+        padding: 60px 50px 40px 50px;
+    }
+
+    .footer-map iframe {
+        width: 100%;
+        height: 400px;
+    }
+
+    .header-contact{
+        padding: 0px 10px;
+    }
+}
+
+
+@media screen and (max-width: 1065px){
+     .banner-text{
+        top: 35%; 
+    }
+
+    .banner-text__club{
+        font-size: 30px;
+    }
+
+    .banner-text__champion{
+        font-size: 70px;
+    }
+
+    .banner-text__discipline{
+        font-size: 30px;
+    }
+
+    .banner-text{
+        top: 45%; 
+    }    
+}
+
+
+@media screen and (max-width: 890px){
+    .contacts{
+        padding: 20px 50px;
+    }
+
+    .disciplines-description{
+        padding: 30px 50px;
+    }
+
+     .banner-text{
+        top: 50%; 
+    }
+
+      .banner-text__club{
+        font-size: 20px;
+    }
+
+    .banner-text__champion{
+        font-size: 60px;
+    }
+
+    .banner-text__discipline{
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 761px){
+ 
+     .banner-text{
+        top: 50%; 
+    }
+
+      .banner-text__club{
+        font-size: 20px;
+    }
+
+    .banner-text__champion{
+        font-size: 60px;
+    }
+
+    .banner-text__discipline{
+        font-size: 30px;
+    }
+
+    .nav-menu__logo img{
+        width: 150px;
+    }
+
+    .disciplines-description__item img{
+        height: 350px;
+    }
+
+    .header-contact{
+        flex-direction: column;
+        height: 150px;
+        gap: 10px;
+    }
+
+    .nav-menu{
+        margin-top: 150px;
+    }
+
+     @keyframes sizeChange { 
+        from {
+            font-size: 18px;
+        }
+        to {
+            font-size: 16px;
+        }
+    }
+
+    .gallery img {
+        height: 400px;
+    }
+}
+
+
+@media screen and (max-width: 716px){
+ 
+      .banner-text__club{
+        font-size: 20px;
+        letter-spacing: 9px;
+    }
+
+    .banner-text__champion{
+        font-size: 60px;
+    }
+
+    .banner-text__discipline{
+        font-size: 30px;
+    }
+
+    .about-club__text h1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 608px){
+    .contacts{
+        padding: 20px 50px;
+    }
+
+    .disciplines-description{
+        padding: 30px 50px;
+    }
+
+     .footer-map iframe {
+        width: 100%;
+        height: 400px;
+        box-sizing: border-box;
+    }
+
+     .footer-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts-text{
+        text-align: center;
+    }
+
+    .banner-text__club{
+        font-size: 15px;
+    }
+
+    .banner-text__champion{
+        font-size: 40px;
+    }
+
+    .banner-text__discipline{
+        font-size: 25px;
+    }
+
+    .gallery img {
+        height: 300px;
+    }
+}
+
+
+@media screen and (max-width: 519px){
+    
+   .footer__logo img{
+        width: 300px;
+    } 
+
+    .disciplines-description__item img{
+        height: 250px;
+    }
+
+    .about-club{
+        height: 1200px;
+    }
+
+    .about-club__text{
+        height: 900px;
+    }
+
+     .disciplines-description__item img{
+        height: 250px;
+    }
+}
+
+
+@media screen and (max-width: 496px){
+    
+    .nav-menu__logo img{
+        width: 100px;
+    }
+   
+}
+
+@media screen and (max-width: 496px){
+    
+    .nav-menu__logo img{
+        width: 100px;
+    } 
+
+    .contacts{
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 437px){
+    
+    .nav-menu__logo img{
+        width: 100px;
+    } 
+
+    .banner-text__club{
+        font-size: 10px;
+    }
+
+    .banner-text__champion{
+        font-size: 30px;
+    }
+
+    .banner-text__discipline{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 391px){
+      .about-club{
+        height: 1400px;
+    }
+
+    .about-club__text{
+        height: 1100px;
+    }
+
+      .gallery img {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 376px){
+   
+    .banner-text__club{
+        font-size: 10px;
+    }
+
+    .banner-text__champion{
+        font-size: 30px;
+    }
+
+    .banner-text__discipline{
+        font-size: 20px;
+    }
+
+      .disciplines-description__item img{
+        height: 200px;
+    }
+}
+
+
+
